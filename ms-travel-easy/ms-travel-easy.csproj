@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ms_travel_easy</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.22.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="src\" />
+    <None Remove="src\Models\" />
+    <None Remove="src\Services\" />
+    <None Remove="src\Repository\" />
+    <None Remove="src\Controllers\" />
+    <None Remove="src\Controllers\V1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\Models\" />
+    <Folder Include="src\Services\" />
+    <Folder Include="src\Repository\" />
+    <Folder Include="src\Controllers\" />
+    <Folder Include="src\Controllers\V1\" />
+  </ItemGroup>
+</Project>
