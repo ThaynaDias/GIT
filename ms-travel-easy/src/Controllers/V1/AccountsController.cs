@@ -24,18 +24,6 @@ namespace ms_travel_easy.src.Controllers
         [HttpGet("{email}")]
         public async Task<ActionResult<Account>> Get(string email)
         {
-        
-            if (string.IsNullOrEmpty(accountRequest.Name))
-            {
-                var badResponse = new
-                {
-                    message = "The Field Name is Required.",
-                    ErrorCode = "BAD_NAME"
-                };
-
-                return BadRequest(badResponse);
-            }
-
             if (!IsValidEmail(email))
             {
                 var badResponse = new
