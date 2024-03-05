@@ -65,7 +65,7 @@ namespace ms_travel_easy.src.Controllers
                 Name = accountRequest.Name,
                 LastName = accountRequest.LastName,
                 Email = accountRequest.Email,
-                PhoneNumber = accountRequest.PhoneNumber, 
+                PhoneNumber = accountRequest.PhoneNumber 
             };
             await _accountsService.CreateAccountAsync(newAccount);
             return Created("", newAccount);
