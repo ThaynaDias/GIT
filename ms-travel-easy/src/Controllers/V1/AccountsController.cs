@@ -53,7 +53,7 @@ namespace ms_travel_easy.src.Controllers
                 var badResponse = new
                 {
                     message = "The Email format is incorrect.",
-                    ErrorCode = "BAD_EMAIL_FORMAT"
+                    ErrorCode = "BAD_EMAIL_FORMAT",
                 };
 
                 return BadRequest(badResponse);
